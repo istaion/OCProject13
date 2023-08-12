@@ -6,7 +6,7 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('oc_lettings_site', '0003_auto_20230629_1230'),
+        ('home', '0003_auto_20230629_1230'),
         ('lettings', '0002_auto_20230629_1231'),
         ('profiles', '0002_auto_20230629_1231'),
     ]
