@@ -24,10 +24,11 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    "whitenoise.runserver_nostatic",
     'django.contrib.staticfiles',
-    'oc_lettings_site.apps.OCLettingsSiteConfig',
     'lettings',
     'profiles',
+    'home',
 ]
 
 MIDDLEWARE = [
