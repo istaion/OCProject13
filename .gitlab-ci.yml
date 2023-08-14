@@ -27,6 +27,7 @@ default:
 stages:          # List of stages for jobs, and their order of execution
   - build
   - test
+  - docker
   - deploy
 
 build-job:       # This job runs in the build stage, which runs first.
@@ -56,6 +57,17 @@ lint-test-job:   # This job also runs in the test stage.
   script:
     - source venv/bin/activate
     - flake8
+
+build-docker-image:
+  stage: docker
+  image: docker
+  services:
+    - docker:dind
+  script:
+    - echo $CI_REGISTRY_PASSWORD | docker login -u $CI_REGISTRY_USER $CI_REGISTRY --password-stdin
+    - docker build -t $CI_REGISTRY_IMAGE .
+    - docker push $CI_REGISTRY_IMAGE
+
 
 deploy-job:      # This job runs in the deploy stage.
   stage: deploy  # It only runs when *both* jobs in the test stage complete successfully.
