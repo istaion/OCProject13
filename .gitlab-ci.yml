@@ -51,5 +51,5 @@ deploy-job:      # This job runs in the deploy stage.
   environment: production
   script:
     - echo "Deploying application..."
-    - curl -X GET (https://api.render.com/deploy/srv-cjd73endb61s73c8ed3g?key=BsxXUaUhIq4)
+    - curl -X GET https://api.render.com/deploy/srv-cjd73endb61s73c8ed3g?key=BsxXUaUhIq4
     - echo "Application successfully deployed."
