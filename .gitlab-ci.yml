@@ -18,21 +18,20 @@
 
 default:
   image: ubuntu:20.04
-  before_script:
-    - apt -y update
-    - apt -y install apt-utils
-    - apt -y install net-tools python3.8 python3-pip python3.8-venv
-    - apt -y upgrade
 
 stages:          # List of stages for jobs, and their order of execution
+  - docker
   - build
   - test
-  - docker
   - deploy
 
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
+    - apt -y update
+    - apt -y install apt-utils
+    - apt -y install net-tools python3.8 python3-pip python3.8-venv
+    - apt -y upgrade
     - echo "creating virtual environment..."
     - python3 -m venv venv
     - source venv/bin/activate
