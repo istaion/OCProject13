@@ -21,7 +21,7 @@ default:
   before_script:
     - apt -y update
     - apt -y install apt-utils
-    - apt -y install net-tools python3.8 python3-pip mysql-client libmysqlclient-dev
+    - apt -y install net-tools python3.8 python3-pip python3.8-venv
     - apt -y upgrade
 
 stages:          # List of stages for jobs, and their order of execution
