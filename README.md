@@ -53,6 +53,11 @@ Dans le reste de la documentation sur le développement local, il est supposé q
 - `source venv/bin/activate`
 - `pytest`
 
+#### Sentry
+
+- Pour utiliser sentry creez un fichier .env à la racine du projet et ajouter votre clef dns de la sorte :
+- SENTRY_DSN = "votre_clef"
+
 #### Base de données
 
 - `cd /path/to/Python-OC-Lettings-FR`
