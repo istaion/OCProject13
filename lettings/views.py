@@ -7,6 +7,9 @@ from .models import Letting
 # ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae;
 # Cras eget scelerisque
 def index(request):
+    """
+    create lettings list and redirect to the lettings index
+    """
     lettings_list = Letting.objects.all()
     context = {'lettings_list': lettings_list}
     return render(request, 'lettings/index.html', context)
@@ -22,6 +25,10 @@ def index(request):
 # lorem. Sed non dolor risus. Mauris condimentum auctor elementum. Donec quis nisi ligula.
 # Integer vehicula tincidunt enim, ac lacinia augue pulvinar sit amet.
 def letting(request, letting_id):
+    """
+    get detail of a letting and redirect to the letting page
+    :param letting_id: id of the letting object
+    """
     letting = Letting.objects.get(id=letting_id)
     context = {
         'title': letting.title,

@@ -9,4 +9,12 @@ from django.shortcuts import render
 # pellentesque iaculis enim cursus in. Praesent volutpat porttitor magna,
 # non finibus neque cursus id.
 def index(request):
+    """
+    redirect to the index
+    """
     return render(request, 'index.html')
+
+
+def error_500(request):
+    data = {}
+    return render(request, '500.html', data)
