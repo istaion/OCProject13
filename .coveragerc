@@ -1,0 +1,2 @@
+[run]
+omit = lettings/tests.py, oc_lettings_site/tests.py, profiles/tests.py
