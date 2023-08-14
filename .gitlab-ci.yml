@@ -32,9 +32,17 @@ stages:          # List of stages for jobs, and their order of execution
 build-job:       # This job runs in the build stage, which runs first.
   stage: build
   script:
+    - echo "creating virtual environment..."
     - python3 -m venv venv
-    - . venv/bin/activate
+    - source venv/bin/activate
+    - echo "installing requirements..."
     - pip install --requirement requirements.txt
+  artifacts:
+    untracked: false
+    when: on_success
+    expire_in: 30 days
+    paths:
+      - venv
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
@@ -46,7 +54,7 @@ unit-test-job:   # This job runs in the test stage.
 lint-test-job:   # This job also runs in the test stage.
   stage: test    # It can run at the same time as unit-test-job (in parallel).
   script:
-    - . venv/bin/activate
+    - source venv/bin/activate
     - flake8
 
 deploy-job:      # This job runs in the deploy stage.
