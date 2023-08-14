@@ -16,32 +16,11 @@
 # This specific template is located at:
 # https://gitlab.com/gitlab-org/gitlab/-/blob/master/lib/gitlab/ci/templates/Getting-Started.gitlab-ci.yml
 
-default:
-  image: ubuntu:20.04
 
 stages:          # List of stages for jobs, and their order of execution
-  - docker
+  - build
   - test
   - deploy
-
-build-job:       # This job runs in the build stage, which runs first.
-  stage: build
-  script:
-    - apt -y update
-    - apt -y install apt-utils
-    - apt -y install net-tools python3.8 python3-pip python3.8-venv
-    - apt -y upgrade
-    - echo "creating virtual environment..."
-    - python3 -m venv venv
-    - source venv/bin/activate
-    - echo "installing requirements..."
-    - pip install --requirement requirements.txt
-  artifacts:
-    untracked: false
-    when: on_success
-    expire_in: 30 days
-    paths:
-      - venv
 
 unit-test-job:   # This job runs in the test stage.
   stage: test    # It only starts when the job in the build stage completes successfully.
@@ -57,7 +36,7 @@ lint-test-job:   # This job also runs in the test stage.
     - flake8
 
 build-docker-image:
-  stage: docker
+  stage: build
   image: docker
   services:
     - docker:dind
