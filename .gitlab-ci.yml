@@ -35,7 +35,6 @@ build-test-job:
     - source venv/bin/activate
     - echo "installing requirements..."
     - pip install --requirement requirements.txt
-    - source venv/bin/activate
     - echo "Running unit tests..."
     - pytest --cov
     - flake8
