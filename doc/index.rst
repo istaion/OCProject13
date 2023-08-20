@@ -3,18 +3,7 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to OC LETTINGS SITE's documentation!
+Bienvenue sur la documentation d'OC LETTINGS SITE !
 ============================================
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
-
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+Oc lettings site est le projet réalisé avec django pour obtenir le Site web d'Orange County Lettings.
