@@ -7,3 +7,14 @@ Bienvenue sur la documentation d'OC LETTINGS SITE !
 ============================================
 
 Oc lettings site est le projet réalisé avec django pour obtenir le Site web d'Orange County Lettings.
+
+Contents
+--------
+
+.. toctree::
+   :maxdepth: 2
+
+   installation
+   tests
+   sentry
+   administration
