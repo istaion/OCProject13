@@ -1,14 +1,16 @@
 Tests
 =====
 
-## Linting
+Linting
+-------
 
 - `cd /path/to/Python-OC-Lettings-FR`
 - `source venv/bin/activate`
 - `flake8`
 
-## Tests unitaires
+Tests unitaires
+---------------
 
 - `cd /path/to/Python-OC-Lettings-FR`
 - `source venv/bin/activate`
-- `pytest`
+- `pytest` ou `pytest --cov` pour obtenir la couverture de test

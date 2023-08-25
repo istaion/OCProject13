@@ -1,6 +1,9 @@
 ## Résumé
 
-Site web d'Orange County Lettings
+Oc lettings site est le projet réalisé avec django pour obtenir le Site web d'Orange County Lettings.
+
+Pipeline CI/CD avec [gitlab](https://gitlab.com/istaion/OCP13) et déploiement sur [Render](https://render.com/).
+
 
 ## Développement local
 
