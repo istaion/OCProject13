@@ -34,26 +34,29 @@
             
   <section id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Link to this heading">¶</a></h1>
-<p>### Créer l’environnement virtuel</p>
+<section id="creer-l-environnement-virtuel">
+<h2>Créer l’environnement virtuel<a class="headerlink" href="#creer-l-environnement-virtuel" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><cite>cd /path/to/Python-OC-Lettings-FR</cite></p></li>
 <li><p><cite>python -m venv venv</cite></p></li>
 <li><p><cite>apt-get install python3-venv</cite> (Si l’étape précédente comporte des erreurs avec un paquet non trouvé sur Ubuntu)</p></li>
-<li><p>Activer l’environnement <cite>source venv/bin/activate</cite></p></li>
+<li><p>Activer l’environnement : <cite>source venv/bin/activate</cite></p></li>
 <li><p>Confirmer que la commande <cite>python</cite> exécute l’interpréteur Python dans l’environnement virtuel <cite>which python</cite></p></li>
 <li><p>Confirmer que la version de l’interpréteur Python est la version 3.6 ou supérieure <cite>python –version</cite></p></li>
 <li><p>Confirmer que la commande <cite>pip</cite> exécute l’exécutable pip dans l’environnement virtuel, <cite>which pip</cite></p></li>
 <li><p>Pour désactiver l’environnement, <cite>deactivate</cite></p></li>
 </ul>
-<p>### Exécuter le site</p>
+</section>
+<section id="executer-le-site">
+<h2>Exécuter le site<a class="headerlink" href="#executer-le-site" title="Link to this heading">¶</a></h2>
 <ul class="simple">
 <li><p><cite>cd /path/to/Python-OC-Lettings-FR</cite></p></li>
 <li><p><cite>source venv/bin/activate</cite></p></li>
 <li><p><cite>pip install –requirement requirements.txt</cite></p></li>
 <li><p><cite>python manage.py runserver</cite></p></li>
 <li><p>Aller sur <cite>http://localhost:8000</cite> dans un navigateur.</p></li>
-<li><p>Confirmer que le site fonctionne et qu’il est possible de naviguer (vous devriez voir plusieurs profils et locations).</p></li>
 </ul>
+</section>
 </section>
 
 
@@ -74,7 +77,11 @@
 
 <h3>Navigation</h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creer-l-environnement-virtuel">Créer l’environnement virtuel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#executer-le-site">Exécuter le site</a></li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="tests.html">Tests</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sentry.html">Sentry</a></li>
 <li class="toctree-l1"><a class="reference internal" href="administration.html">Panel d’administration</a></li>
